@@ -1,4 +1,4 @@
-<h2>ChatCave:</h2>h2>
+<h2>ChatCave:</h2>
 A real-time chatting application.
 
 Key Technologies Used: 

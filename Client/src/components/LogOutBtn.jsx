@@ -4,8 +4,8 @@ import useLogOut from "../hooks/useLogOut";
 const LogOutBtn = () => {
   const { loading, logout } = useLogOut();
   return (
-    <div className="flex items-start">
-      <button onClick={logout}>
+    <div className="flex items-start relative">
+      <button onClick={logout} className="absolute ">
         {loading ? (
           <span className="loading loading-spinner"></span>
         ) : (

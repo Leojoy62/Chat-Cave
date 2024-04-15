@@ -1,15 +1,26 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
 import MessageContainer from "../../msaages/MessageContainer";
+import useConversation from "../../zustand/useConversation";
 
 const Home = () => {
+  const { selectedConversation } = useConversation();
+
   return (
-    <div className="w-[800px] h-[600px] shadow-2xl rounded-xl p-5">
-      <div className="flex h-[100%]">
-        <div className="w-[40%]  border-r-2 border-gray-300 mr-2 ">
+    <div className="w-[100%] h-[80%]  md:w-[800px] md:h-[600px] shadow-2xl rounded-xl p-5">
+      <div className="md:flex h-[100%]">
+        <div
+          className={`md:block w-[100%] md:w-[40%]  md:border-r-2 md:border-gray-300 mr-2 ${
+            selectedConversation ? "hidden" : ""
+          }`}
+        >
           <Sidebar></Sidebar>
         </div>
-        <div className="w-[80%]">
+        <div
+          className={`md:block w-[100%] md:w-[80%] ${
+            selectedConversation ? "" : "hidden"
+          }`}
+        >
           <MessageContainer />
         </div>
       </div>

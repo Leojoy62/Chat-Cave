@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div>
       <SearchBox></SearchBox>
 
-      <div className="mt-5 h-[450px] overflow-y-auto">
+      <div className="mt-5 h-[450px]  md:h-[450px] overflow-y-auto">
         <Conversations></Conversations>
       </div>
       <div className="text-3xl mt-5">

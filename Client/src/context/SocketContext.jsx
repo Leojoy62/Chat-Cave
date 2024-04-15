@@ -14,7 +14,7 @@ const SocketContext = ({ children }) => {
 
   useEffect(() => {
     if (authUser && authUser._id !== null) {
-      const socket = io("http://localhost:5000", {
+      const socket = io("https://chat-cave.onrender.com/", {
         query: {
           userId: authUser._id,
         },

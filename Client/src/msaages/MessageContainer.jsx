@@ -12,17 +12,26 @@ const MessageContainer = () => {
     return () => setSelectedConversation(null);
   }, [setSelectedConversation]);
 
+  const handleBack = () => {
+    setSelectedConversation(null);
+  };
+
   return (
     <div className="md:min-w-[450px] flex flex-col justify-center">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
         <>
-          <div className="bg-slate-500 w-[100%] md:min-w-[450px]  px-4 py-2 mb-2">
-            <span className="label-text">To:</span>{" "}
-            <span className="text-gray-900 font-bold">
-              {selectedConversation.fullname}
-            </span>
+          <div className="flex justify-between md:flex-col bg-slate-500 w-[100%] md:min-w-[450px]  px-4 py-2 mb-2">
+            <div>
+              <span className="label-text">To:</span>{" "}
+              <span className="text-gray-900 font-bold">
+                {selectedConversation.fullname}
+              </span>
+            </div>
+            <div className="md:hidden">
+              <p onClick={handleBack}>Back</p>
+            </div>
           </div>
           <div className="mt-5 h-[450px] overflow-y-auto">
             <Messages />

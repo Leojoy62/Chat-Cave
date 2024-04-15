@@ -1,7 +1,7 @@
 <h2>ChatCave:</h2>
 A real-time chatting application.
 
-Key Technologies Used: 
+Key Technologies Used: <br/> 
 Front-end: React.js, Axios, React Router, Zustand, Socket.io client, React-hot-toast, react-icons, Tailwind CSS.
 
 Back-end: Node.js, Express.js, Mongoose, JWT, Socket.io. Bcrypt, Cookie-Parser, dotenv.
